@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online image compressor tool - reduce image file size without losing quality. Supports JPG, PNG, WebP, GIF, BMP, TIFF, and more.">
-    <meta name="keywords" content="image compressor, image optimization, reduce image size, online tool, free image compression">
-    <meta name="author" content="ImageCompressPro">
-    <title>ImageCompressPro | Free Online Image Compression Tool</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_CLIENT_ID" crossorigin="anonymous"></script>
+    <meta name="description" content="Free online image compressor tool - reduce image file size without losing quality. Supports JPG, PNG, WebP, GIF, SVG, BMP, TIFF and more.">
+    <meta name="keywords" content="image compressor, image optimizer, reduce image size, online tools, web optimization, jpeg compression, jpg optimizer">
+    <title>ImageCompressorPro | Free Online JPEG and Image Compression Tool</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -55,6 +54,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo {
@@ -426,6 +426,7 @@
         .ad-placeholder {
             text-align: center;
             color: var(--gray);
+            width: 100%;
         }
 
         .ad-placeholder i {
@@ -494,6 +495,7 @@
             justify-content: center;
             gap: 1.5rem;
             margin: 1rem 0;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
@@ -544,7 +546,7 @@
         <div class="header-container">
             <div class="logo">
                 <i class="fas fa-compress-alt"></i>
-                <span>ImageCompressPro</span>
+                <span>ImageCompressorPro</span>
             </div>
             <nav>
                 <ul>
@@ -559,7 +561,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Compress Images Without Losing Quality</h1>
+        <h1>Compress JPEG & Images Without Losing Quality</h1>
         <p>Reduce your image file size by up to 90% with our advanced compression algorithm. Perfect for websites, social media, and email attachments.</p>
     </section>
 
@@ -579,7 +581,7 @@
                     <input type="file" id="file-input" accept="image/*">
                 </div>
                 <div class="supported-formats">
-                    <span class="format-tag">JPG</span>
+                    <span class="format-tag">JPEG/JPG</span>
                     <span class="format-tag">PNG</span>
                     <span class="format-tag">GIF</span>
                     <span class="format-tag">WebP</span>
@@ -690,6 +692,18 @@
                     <h3>Advertisement Space</h3>
                     <p>AdSense Unit ID: IMAGE_TOP_RIGHT</p>
                     <!-- Google AdSense code would go here -->
+                    <!-- 
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_CLIENT_ID" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-YOUR_AD_CLIENT_ID"
+                         data-ad-slot="IMAGE_TOP_RIGHT"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    -->
                 </div>
             </div>
 
@@ -701,14 +715,14 @@
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <strong>All Image Formats</strong>
-                            <p>Supports JPG, PNG, GIF, WebP, BMP, TIFF, SVG and more</p>
+                            <p>Supports JPEG, PNG, GIF, WebP, and more</p>
                         </div>
                     </li>
                     <li>
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <strong>Flexible Output</strong>
-                            <p>Save compressed images in any format you need</p>
+                            <p>Save compressed images in any format</p>
                         </div>
                     </li>
                     <li>
@@ -735,6 +749,18 @@
                     <h3>Advertisement Space</h3>
                     <p>AdSense Unit ID: IMAGE_BOTTOM_RIGHT</p>
                     <!-- Google AdSense code would go here -->
+                    <!-- 
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_CLIENT_ID" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-YOUR_AD_CLIENT_ID"
+                         data-ad-slot="IMAGE_BOTTOM_RIGHT"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    -->
                 </div>
             </div>
         </div>
@@ -742,7 +768,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2023 ImageCompressPro. All rights reserved.</p>
+        <p>© 2023 ImageCompressorPro. All rights reserved.</p>
         <div class="footer-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
@@ -849,8 +875,8 @@
         // Get format name from MIME type
         function getFormatName(mimeType) {
             const types = {
-                'image/jpeg': 'JPG',
-                'image/jpg': 'JPG',
+                'image/jpeg': 'JPEG',
+                'image/jpg': 'JPEG',
                 'image/png': 'PNG',
                 'image/gif': 'GIF',
                 'image/webp': 'WebP',
@@ -888,8 +914,6 @@
             
             if (currentFormat === 'png') {
                 mimeType = 'image/png';
-                // PNG compression is different - we use a different approach
-                quality = (100 - compressionLevel) / 100;
             } else if (currentFormat === 'webp') {
                 mimeType = 'image/webp';
             } else if (currentFormat === 'gif') {
